@@ -8,37 +8,32 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    <section class = "title">
-        <h1>TRIVIA</h1>
-    </section>
+    <section class = "container">
+        <header>
+            <h1>TR¡V¡A</h1>
 
-    <section class = "progression">
-        <div class="progress-bar">1</div>
-        <div class="progress-bar">2</div>
-        <div class="progress-bar">3</div>
-        <div class="progress-bar">4</div>
-        <div class="progress-bar">5</div>
-        <div class="progress-bar">6</div>
-        <div class="progress-bar">7</div>
-        <div class="progress-bar">8</div>
-        <div class="progress-bar">9</div>
-        <div class="progress-bar">10</div>
-        <div class="progress-bar">11</div>
-        <div class="progress-bar">12</div>
-        <div class="progress-bar">13</div>
-        <div class="progress-bar">14</div>
-        <div class="progress-bar">15</div>
-    </section>
+        </header>
+        <section class = "progress-score">
+            <div class = "progress">
+                <div class = "progress__text">Question #</div>
+                <div class = "progress__bar"></div>
+            </div>
+            <div class = "score">
+                <div class = "score__text">Score:</div>
+                <div class = "score__total">0</div>
+            </div>
+        </section>
+        <section class = "question">
+            <div class = "question__text">Question</div>
+            <div class = "question__choices">
+                <div class = "question__choices--each">A</div>
+                <div class = "question__choices--each">B</div>
+                <div class = "question__choices--each">C</div>
+                <div class = "question__choices--each">D</div>
+            </div>
+        </section>
+        
 
-    <section class="question">
-        <h2>Question</h2>
-    </section>
-
-    <section class = "answers">
-        <div class="multi-choice">A</div>
-        <div class="multi-choice">B</div>
-        <div class="multi-choice">C</div>
-        <div class="multi-choice">D</div>
     </section>
 </body>
 </html>

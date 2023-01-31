@@ -16,3 +16,13 @@ let questions = questionObject;
 
 const pointScore = 100;
 const maxQuestions = 20;
+
+// function for starting the game
+startGame = () => {
+    questionCount = 0;
+    score = 0;
+    questionsAvailable = [...questions];
+    getNextQuestion();
+}
+
+

@@ -29,4 +29,45 @@ startGame = function startGame() {
   score = 0;
   questionsAvailable = _toConsumableArray(questions);
   getNextQuestion();
+}; // function to get the next question
+
+
+getNextQuestion = function getNextQuestion() {
+  questionCount++;
+  progressText.innerHTML = "Question ".concat(questionCount, " of ").concat(maxQuestions); //find out how to increase fill of progress bar by percentage of question# out of total questions
+
+  var questionIndex = Math.random() * questionsAvailable.length();
+  currentQuestion = questionsAvailable(questionIndex);
+  question.innerHTML = currentQuestion.question; //get choices for questions
+  //remove current question from available question
+
+  acceptAnswers = true;
+}; //function fo accept selected choice and check if correct/incorrect
+
+
+acceptSelectedChoice = function acceptSelectedChoice() {
+  if (!acceptAnswers) {
+    return;
+  }
+
+  acceptAnswers = false;
+  var selectedChoice = e.target.value;
+  var classToApply = selectedChoice == currentQuestion.answer; //toggle between correct and incorrect
+
+  if (classToApply === "correct") {} //add score by pointScore
+  //add class: classToApply to parent element of selected choice
+  //remove classToApply after few seconds -use setTimeout()?
+
+}; //add event listener for each choice to click and accept answers
+
+
+choices.forEach(function (choice) {
+  choice.addEventListener("click", acceptSelectedChoice());
+}); //add to score
+
+increaseScore = function increaseScore() {
+  score += pointScore;
+  scoreTotal.innerHTML = score;
 };
+
+startGame();

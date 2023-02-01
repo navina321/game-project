@@ -48,6 +48,7 @@ header .home-icon {
 .progress-score {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 0;
 }
 .progress-score .progress__text {
@@ -108,4 +109,63 @@ header .home-icon {
 
 .incorrect {
   background-color: #E65F5C;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header h1 {
+    font-size: 250%;
+  }
+
+  .progress-score {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  .progress-score .progress__text {
+    font-size: 175%;
+  }
+  .progress-score .progress__bar {
+    height: 1rem;
+    width: 25rem;
+    border: 5px solid #FEF9A8;
+    border-radius: 20px;
+  }
+  .progress-score .score__text {
+    font-size: 175%;
+  }
+  .progress-score .score__total {
+    font-size: 150%;
+  }
+
+  .question__text {
+    height: 10rem;
+    width: auto;
+    border: 10px solid #FEF9A8;
+    border-radius: 1.5rem;
+    font-size: 250%;
+    margin-bottom: 2rem;
+  }
+  .question__choices {
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .question__choices--option {
+    flex-basis: 45%;
+    height: 6rem;
+    width: auto;
+    border: 6px solid #FEF9A8;
+    border-radius: 1rem;
+    font-size: 175%;
+  }
 }

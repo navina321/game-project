@@ -59,6 +59,7 @@ header {
 .progress-score{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 0;
 
     .progress{
@@ -130,4 +131,78 @@ header {
 
 .incorrect {
     background-color: $color-incorrect;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h1 {
+            font-size: 250%;
+        }
+    }
+
+    .progress-score{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0;
+    
+        .progress{
+            
+            &__text {
+                font-size: 175%;
+            }
+            &__bar {
+                height: 1rem;
+                width: 25rem;
+                border: 5px solid $color-secondary;
+                border-radius: 20px;
+            }
+        }
+        .score{
+            
+            &__text {
+                font-size: 175%;
+            }
+            &__total{
+                font-size: 150%;
+            }
+        }
+    }
+
+    .question {
+        &__text {
+            
+            height: 10rem;
+            width: auto;
+            border: 10px solid $color-secondary;
+            border-radius: 1.5rem;
+            font-size: 250%;
+            margin-bottom: 2rem;
+        }
+    
+        &__choices {
+            
+            height: 20rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-left: 1rem;
+            margin-right: 1rem;
+    
+            &--option {
+                flex-basis: 45%;
+                height: 6rem;
+                width: auto;
+                border: 6px solid $color-secondary;
+                border-radius: 1rem;
+                font-size: 175%;
+            }
+            
+        }
+    }
 }

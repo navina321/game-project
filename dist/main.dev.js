@@ -20,54 +20,70 @@ var acceptAnswers = true;
 var score = 0;
 var questionCount = 0;
 var questionsAvailable = [];
-var questions = _question.questionObject;
+var currentAnswer = ""; //let questions = questionObject;
+
 var pointScore = 100;
 var maxQuestions = 20; // function for starting the game
 
-startGame = function startGame() {
+var startGame = function startGame() {
   questionCount = 0;
   score = 0;
-  questionsAvailable = _toConsumableArray(questions);
+  questionsAvailable = _toConsumableArray(_question.questionObject);
   getNextQuestion();
 }; // function to get the next question
 
 
-getNextQuestion = function getNextQuestion() {
-  questionCount++;
-  progressText.innerHTML = "Question ".concat(questionCount, " of ").concat(maxQuestions); //find out how to increase fill of progress bar by percentage of question# out of total questions
-
-  var questionIndex = Math.random() * questionsAvailable.length();
-  currentQuestion = questionsAvailable(questionIndex);
-  question.innerHTML = currentQuestion.question; //get choices for questions
-  //remove current question from available question
-
-  acceptAnswers = true;
-}; //function fo accept selected choice and check if correct/incorrect
-
-
-acceptSelectedChoice = function acceptSelectedChoice() {
-  if (!acceptAnswers) {
+var getNextQuestion = function getNextQuestion() {
+  if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
     return;
   }
 
-  acceptAnswers = false;
-  var selectedChoice = e.target.value;
-  var classToApply = selectedChoice == currentQuestion.answer; //toggle between correct and incorrect
+  questionCount++;
+  progressText.innerText = "Question ".concat(questionCount, " of ").concat(maxQuestions); //find out how to increase fill of progress bar by percentage of question# out of total questions
+  //keep track of which question is on
 
-  if (classToApply === "correct") {} //add score by pointScore
-  //add class: classToApply to parent element of selected choice
-  //remove classToApply after few seconds -use setTimeout()?
+  var questionIndex = Math.floor(Math.random() * questionsAvailable.length);
+  currentQuestion = questionsAvailable[questionIndex];
+  currentAnswer = currentQuestion.answer; // console.log(currentAnswer);
 
+  question.innerText = currentQuestion.question; //get choices for questions
+
+  for (var index = 0; index < choices.length; index++) {
+    // console.log(currentQuestion);
+    choices[index].innerHTML = currentQuestion.choices[index];
+  } //remove current question from available questions
+
+
+  questionsAvailable.splice(questionIndex, 1); // console.log(questionsAvailable);
+
+  acceptAnswers = true;
 }; //add event listener for each choice to click and accept answers
 
 
 choices.forEach(function (choice) {
-  choice.addEventListener("click", acceptSelectedChoice());
+  choice.addEventListener("click", function (e) {
+    if (!acceptAnswers) {
+      return;
+    }
+
+    acceptAnswers = false;
+    var selectedChoice = e.target.value; //accept selected choice and check if correct/incorrect
+    //toggle between correct and incorrect
+
+    var classToApply = selectedChoice == currentQuestion.answer;
+
+    if (classToApply === "correct") {
+      //add score by pointScore
+      increaseScore();
+    } //add class: classToApply to selected choice
+    //remove classToApply after few seconds -use setTimeout()?
+
+  });
 }); //add to score
 
-increaseScore = function increaseScore() {
+var increaseScore = function increaseScore() {
   score += pointScore;
-  scoreTotal.innerHTML = score;
+  scoreTotal.innerText = score;
 };
 
 startGame();

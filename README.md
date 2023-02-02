@@ -17,7 +17,12 @@ Timeline:
 
 01/02/23: Wrote out js functions -not currently complete. Added media query for desktop/tablet screen. Javascript startGame and getNextQuestion functions working. Changed questionObject do choices are in array.
 
-02/02/23: Added the javascript for changing choice background if correct/incorrect - not currently working.
+02/02/23: Added the javascript for changing choice background if correct/incorrect - not currently working. Fixed apply correct/incorrect class to javascript, increase score and get next question functions working properly. Changed progress bar to show question progress. Moved unnecessary code to gitignore file.
+
+
+
+Mobile Display: ![mobile-game](https://user-images.githubusercontent.com/81630548/216384905-b9232c82-e63d-4a64-9783-c861d2d557b7.PNG)
+
 
 Pseudocode/Code Planning
 ![HTML-CSS plan-pseudocode](https://user-images.githubusercontent.com/81630548/214893048-81f0c464-e514-4086-9bb2-fab6ce5fcbf2.jpg)

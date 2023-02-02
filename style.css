@@ -12,7 +12,7 @@
   align-items: center;
 }
 .home-page__title {
-  color: #FEF9A8;
+  color: #fef9a8;
   font-size: 500%;
   text-align: center;
   margin-top: 5rem;
@@ -20,21 +20,21 @@
 .home-page__text {
   text-align: center;
   margin-top: 5rem;
-  border: 10px solid #C68AFE;
+  border: 10px solid #c68afe;
   border-radius: 1rem;
   height: 5rem;
   width: 80%;
-  background-color: #6BBBFF;
-  color: #22045C;
+  background-color: #6bbbff;
+  color: #22045c;
   font-size: 200%;
 }
 
 body {
-  background-color: #22045C;
+  background-color: #22045c;
 }
 
 header {
-  color: #FEF9A8;
+  color: #fef9a8;
   text-align: center;
   font-size: 150%;
   display: flex;
@@ -47,34 +47,39 @@ header .home-icon {
 
 .progress-score {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   padding: 0;
 }
 .progress-score .progress {
   padding: 0;
   margin: 0;
-  width: 12rem;
+  width: auto;
   height: 2rem;
-  border: 3.5px solid #FEF9A8;
+  border: 3.5px solid #fef9a8;
+  border-radius: 10px;
 }
 .progress-score .progress__text {
-  color: #FEF9A8;
+  color: #fef9a8;
   font-size: 120%;
 }
 .progress-score .progress__bar {
   padding: 0;
   margin: 0;
   height: 2rem;
-  background-color: #2BA84A;
+  background-color: #2ba84a;
   width: 5%;
+  border-radius: 5px;
+}
+.progress-score .score {
+  display: flex;
 }
 .progress-score .score__text {
-  color: #FEF9A8;
+  color: #fef9a8;
   font-size: 120%;
 }
 .progress-score .score__total {
-  color: #FEF9A8;
+  color: #fef9a8;
   text-align: center;
   font-size: 120%;
 }
@@ -82,10 +87,10 @@ header .home-icon {
 .question__text {
   height: 9rem;
   width: auto;
-  border: 5px solid #FEF9A8;
+  border: 5px solid #fef9a8;
   border-radius: 1.5rem;
-  background-color: #C68AFE;
-  color: #22045C;
+  background-color: #c68afe;
+  color: #22045c;
   font-size: 150%;
   display: flex;
   align-items: center;
@@ -95,7 +100,7 @@ header .home-icon {
   padding: 0;
   margin-top: 1rem;
   height: 15rem;
-  color: #22045C;
+  color: #22045c;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -103,8 +108,8 @@ header .home-icon {
 .question__choices--option {
   height: 1.5rem;
   width: auto;
-  background-color: #6BBBFF;
-  border: 3.5px solid #FEF9A8;
+  background-color: #6bbbff;
+  border: 3.5px solid #fef9a8;
   border-radius: 1rem;
   text-align: center;
   font-size: 125%;
@@ -113,15 +118,15 @@ header .home-icon {
   align-items: center;
 }
 .question__choices :hover {
-  background-color: #6B7DFF;
+  background-color: #6b7dff;
 }
 
 .correct {
-  background-color: #2BA84A;
+  background-color: #2ba84a;
 }
 
 .incorrect {
-  background-color: #E65F5C;
+  background-color: #e65f5c;
 }
 
 @media screen and (min-width: 768px) {
@@ -135,25 +140,19 @@ header .home-icon {
   }
 
   .progress-score {
+    font-size: 150%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0;
+    justify-content: space-around;
   }
-  .progress-score .progress__text {
-    font-size: 175%;
-  }
-  .progress-score .score__text {
-    font-size: 175%;
-  }
-  .progress-score .score__total {
-    font-size: 150%;
+  .progress-score .progress {
+    width: 25rem;
   }
 
   .question__text {
     height: 9rem;
     width: auto;
-    border: 10px solid #FEF9A8;
+    border: 10px solid #fef9a8;
     border-radius: 1.5rem;
     font-size: 250%;
     margin-bottom: 2rem;
@@ -162,7 +161,7 @@ header .home-icon {
     align-items: center;
   }
   .question__choices {
-    height: 15rem;
+    height: 17rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -174,7 +173,7 @@ header .home-icon {
     flex-basis: 47.5%;
     height: 5rem;
     width: auto;
-    border: 6px solid #FEF9A8;
+    border: 6px solid #fef9a8;
     border-radius: 1rem;
     font-size: 175%;
   }

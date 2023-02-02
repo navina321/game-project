@@ -22,3 +22,43 @@ unused or incorrect code for checking if selected choice is correct/incorrect
     //   selectedChoice.classList.remove(classToApply)
     //   getNextQuestion()
     // },2000)
+
+unused css
+
+    // .progress-score {
+//   color: $color-secondary;
+//   font-size: 120%;
+
+//   display: grid;
+//   grid-template-columns: 3fr 1fr;
+//   grid-template-rows: 1fr 1fr;
+//   .progress {
+//     &__text {
+//       grid-column-start: 1;
+//       grid-column-end: 2;
+//       grid-row-start: 1;
+//       grid-row-end: 2;
+//     }
+//     &__bar {
+//       border: 2px solid $color-secondary;
+//       grid-column-start: 1;
+//       grid-column-end: 2;
+//       grid-row-start: 2;
+//       grid-row-end: 3;
+//     }
+//   }
+//   .score {
+//     &__text {
+//         grid-column-start: 2;
+//         grid-column-end: 3;
+//         grid-row-start: 1;
+//         grid-row-end: 2;
+//     }
+//     &__total {
+//         grid-column-start: 2;
+//         grid-column-end: 3;
+//         grid-row-start: 2;
+//         grid-row-end: 3;
+//     }
+//   }
+// }

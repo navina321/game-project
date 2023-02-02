@@ -143,12 +143,6 @@ header .home-icon {
   .progress-score .progress__text {
     font-size: 175%;
   }
-  .progress-score .progress__bar {
-    height: 1rem;
-    width: 25rem;
-    border: 5px solid #FEF9A8;
-    border-radius: 20px;
-  }
   .progress-score .score__text {
     font-size: 175%;
   }

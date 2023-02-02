@@ -17,7 +17,7 @@ Timeline:
 
 01/02/23: Wrote out js functions -not currently complete. Added media query for desktop/tablet screen. Javascript startGame and getNextQuestion functions working. Changed questionObject do choices are in array.
 
-02/02/23: Added the javascript for changing choice background if correct/incorrect - not currently working.
+02/02/23: Added the javascript for changing choice background if correct/incorrect - not currently working. 
 
 Pseudocode/Code Planning
 ![HTML-CSS plan-pseudocode](https://user-images.githubusercontent.com/81630548/214893048-81f0c464-e514-4086-9bb2-fab6ce5fcbf2.jpg)

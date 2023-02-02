@@ -63,15 +63,23 @@ header {
     padding: 0;
 
     .progress{
+        padding: 0;
+        margin: 0;
+        width: 12rem;
+        height: 2rem;
+        border: 3.5px solid $color-secondary;
+        
         &__text {
             color: $color-secondary;
             font-size: 120%;
         }
         &__bar {
-            height: 0.5rem;
-            width: 12rem;
-            border: 3.5px solid $color-secondary;
-            border-radius: 20px;
+            padding: 0;
+            margin: 0;
+            height: 2rem;
+            background-color: #2BA84A;
+            width: 5%;
+            
         }
     }
     .score{

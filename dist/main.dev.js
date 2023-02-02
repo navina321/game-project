@@ -20,8 +20,7 @@ var acceptAnswers = true;
 var score = 0;
 var questionCount = 0;
 var questionsAvailable = [];
-var currentAnswer = ""; //let questions = questionObject;
-
+var currentAnswer = "";
 var pointScore = 100;
 var maxQuestions = 20; // function for starting the game
 
@@ -39,23 +38,21 @@ var getNextQuestion = function getNextQuestion() {
   }
 
   questionCount++;
-  progressText.innerText = "Question ".concat(questionCount, " of ").concat(maxQuestions); //find out how to increase fill of progress bar by percentage of question# out of total questions
+  progressText.innerText = "Question ".concat(questionCount, " of ").concat(maxQuestions);
+  progressBar.style.width = "".concat(questionCount / maxQuestions * 100, "%"); //find out how to increase fill of progress bar by percentage of question# out of total questions
   //keep track of which question is on
 
   var questionIndex = Math.floor(Math.random() * questionsAvailable.length);
   currentQuestion = questionsAvailable[questionIndex];
-  currentAnswer = currentQuestion.answer; // console.log(currentAnswer);
-
+  currentAnswer = currentQuestion.answer;
   question.innerText = currentQuestion.question; //get choices for questions
 
   for (var index = 0; index < choices.length; index++) {
-    // console.log(currentQuestion);
     choices[index].innerHTML = currentQuestion.choices[index];
   } //remove current question from available questions
 
 
-  questionsAvailable.splice(questionIndex, 1); // console.log(questionsAvailable);
-
+  questionsAvailable.splice(questionIndex, 1);
   acceptAnswers = true;
 }; //add event listener for each choice to click and accept answers
 
@@ -64,43 +61,40 @@ choices.forEach(function (choice) {
   choice.addEventListener("click", function (e) {
     if (!acceptAnswers) {
       return;
-    } // acceptAnswers = false;
-    // const selectedChoice = e.target.value;
-    // const selectedAnswer = selectedChoice;
-    // //accept selected choice and check if correct/incorrect
-    // let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-    // if (classToApply === "correct") {
-    //   increaseScore(pointScore);
-    // }
-    // //add class: classToApply to selected choice
-    // selectedChoice.parentElement.classList.add(classToApply)
-
+    }
 
     if (acceptAnswers = true) {
       var selectedChoice = e.target;
-      var selectedAnswer = selectedChoice;
 
-      if (selectedAnswer === currentQuestion.answer) {
+      if (selectedChoice.innerText == currentAnswer) {
         selectedChoice.classList.add("correct");
         increaseScore(pointScore);
-      } else if (selectedAnswer != currentQuestion.answer) {
+      } else if (selectedChoice.innerText != currentAnswer) {
         selectedChoice.classList.add("incorrect");
       }
 
-      return getNextQuestion();
-    } // setTimeout(()=>{getNextQuestion()},3000)
-    //remove classToApply after few seconds -use setTimeout()?
-    // setTimeout(()=>{
-    //   selectedChoice.classList.remove(classToApply)
-    //   getNextQuestion()
-    // },3000)
+      setTimeout(function () {
+        selectedChoice.classList.remove("correct");
+        selectedChoice.classList.remove("incorrect");
+        getNextQuestion();
+      }, 3000);
+    }
 
+    return;
   });
-}); //add to score
+}); //function to add to score
 
 var increaseScore = function increaseScore() {
   score += pointScore;
   scoreTotal.innerText = score;
+}; //function to trigger end game
+
+
+var endGame = function endGame() {
+  if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
+    alert("Congratulations!!!");
+    return endGame();
+  }
 };
 
 startGame();

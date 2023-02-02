@@ -1,0 +1,23 @@
+
+unused or incorrect code for checking if selected choice is correct/incorrect
+
+    // acceptAnswers = false;
+    // const selectedChoice = e.target.value;
+    // const selectedAnswer = selectedChoice;
+    // //accept selected choice and check if correct/incorrect
+    // let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+    // if (classToApply === "correct") {
+    //   increaseScore(pointScore);
+    // }
+
+    // //add class: classToApply to selected choice
+    // selectedChoice.classList.add(classToApply)
+
+    // setTimeout(()=>{getNextQuestion()},3000)
+
+    //remove classToApply after few seconds -use setTimeout()?
+    // setTimeout(()=>{
+    //   selectedChoice.classList.remove(classToApply)
+    //   getNextQuestion()
+    // },2000)

@@ -1,4 +1,4 @@
-import { questionObject } from "./question.js";
+import {questionObject} from "./question.js";
 
 const question = document.querySelector(".question__text");
 const choices = Array.from(
@@ -14,8 +14,6 @@ let score = 0;
 let questionCount = 0;
 let questionsAvailable = [];
 let currentAnswer = "";
-
-//let questions = questionObject;
 
 const pointScore = 100;
 const maxQuestions = 20;
@@ -36,6 +34,7 @@ const getNextQuestion = () => {
 
   questionCount++;
   progressText.innerText = `Question ${questionCount} of ${maxQuestions}`;
+  progressBar.style.width = `${(questionCount/maxQuestions)*100}%`
 
   //find out how to increase fill of progress bar by percentage of question# out of total questions
 
@@ -43,18 +42,17 @@ const getNextQuestion = () => {
   const questionIndex = Math.floor(Math.random() * questionsAvailable.length);
   currentQuestion = questionsAvailable[questionIndex];
   currentAnswer = currentQuestion.answer;
-  // console.log(currentAnswer);
+  
   question.innerText = currentQuestion.question;
 
   //get choices for questions
   for (let index = 0; index < choices.length; index++) {
-    // console.log(currentQuestion);
     choices[index].innerHTML = currentQuestion.choices[index];
   }
 
   //remove current question from available questions
   questionsAvailable.splice(questionIndex, 1);
-  // console.log(questionsAvailable);
+
   acceptAnswers = true;
 };
 
@@ -66,46 +64,38 @@ choices.forEach((choice) => {
       return;
     }
 
-    // acceptAnswers = false;
-    // const selectedChoice = e.target.value;
-    // const selectedAnswer = selectedChoice;
-    // //accept selected choice and check if correct/incorrect
-    // let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-
-    // if (classToApply === "correct") {
-    //   increaseScore(pointScore);
-    // }
-
-    // //add class: classToApply to selected choice
-    // selectedChoice.parentElement.classList.add(classToApply)
-
     if(acceptAnswers = true) {
       const selectedChoice = e.target;
-      const selectedAnswer =selectedChoice
-      if(selectedAnswer === currentQuestion.answer) {
+     
+      if(selectedChoice.innerText == currentAnswer) {
         selectedChoice.classList.add("correct")
         increaseScore(pointScore)
-      }else if (selectedAnswer != currentQuestion.answer) { 
+
+      }else if (selectedChoice.innerText != currentAnswer) { 
         selectedChoice.classList.add("incorrect")
       }
-      return getNextQuestion();
+      setTimeout(()=>{
+        selectedChoice.classList.remove("correct")
+        selectedChoice.classList.remove("incorrect")
+        getNextQuestion();
+      },3000)
     }
-
-    // setTimeout(()=>{getNextQuestion()},3000)
-
-    //remove classToApply after few seconds -use setTimeout()?
-    // setTimeout(()=>{
-    //   selectedChoice.classList.remove(classToApply)
-    //   getNextQuestion()
-    // },3000)
-
+    return;
   });
 });
 
-//add to score
+//function to add to score
 const increaseScore = () => {
   score += pointScore;
   scoreTotal.innerText = score;
 };
+
+//function to trigger end game
+const endGame = () => {
+  if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
+    alert("Congratulations!!!")
+    return endGame();
+  }
+}
 
 startGame();

@@ -2,7 +2,7 @@
 
 Introduction
 
-I have used a combination of HTML, CSS/SCSS and JavaScript to create a fully functioning browser-based trivia game which has a start page, game page with 20 questions and 4 answer choices for each question. 
+I have used a combination of HTML, CSS/SCSS and JavaScript to create a fully functioning browser-based trivia game which has a start page, game page with 20 questions and 4 answer choices for each question, the background color for selected choice will go green if it is correct and red if incorrect. The game will get a new question, 3secs after selecting an answer. 
 
 Mobile Display:
 ![mobile-game](https://user-images.githubusercontent.com/81630548/216459073-e4f1c775-c876-478c-a3d7-38f44327fbde.PNG)

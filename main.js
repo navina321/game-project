@@ -78,7 +78,7 @@ choices.forEach((choice) => {
         selectedChoice.classList.remove("correct")
         selectedChoice.classList.remove("incorrect")
         getNextQuestion();
-      },3000)
+      },5000)
     }
     return;
   });

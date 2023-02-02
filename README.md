@@ -5,7 +5,7 @@ Introduction
 I have used a combination of HTML, CSS/SCSS and JavaScript to create a fully functioning browser-based trivia game which has a start page, game page with 20 questions and 4 answer choices for each question. 
 
 Mobile Display:
-![mobile-game](https://user-images.githubusercontent.com/81630548/216458680-5c868d15-007c-4aae-ade9-b1d2ccbec213.PNG)
+![mobile-game](https://user-images.githubusercontent.com/81630548/216459073-e4f1c775-c876-478c-a3d7-38f44327fbde.PNG)
 
 Desktop Display:
 ![desktop-game](https://user-images.githubusercontent.com/81630548/216458762-0d444a3c-2d59-44a9-a50c-c31840f4f52d.PNG)

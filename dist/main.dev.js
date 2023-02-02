@@ -64,19 +64,36 @@ choices.forEach(function (choice) {
   choice.addEventListener("click", function (e) {
     if (!acceptAnswers) {
       return;
-    }
+    } // acceptAnswers = false;
+    // const selectedChoice = e.target.value;
+    // const selectedAnswer = selectedChoice;
+    // //accept selected choice and check if correct/incorrect
+    // let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+    // if (classToApply === "correct") {
+    //   increaseScore(pointScore);
+    // }
+    // //add class: classToApply to selected choice
+    // selectedChoice.parentElement.classList.add(classToApply)
 
-    acceptAnswers = false;
-    var selectedChoice = e.target.value; //accept selected choice and check if correct/incorrect
-    //toggle between correct and incorrect
 
-    var classToApply = selectedChoice == currentQuestion.answer;
+    if (acceptAnswers = true) {
+      var selectedChoice = e.target;
+      var selectedAnswer = selectedChoice;
 
-    if (classToApply === "correct") {
-      //add score by pointScore
-      increaseScore();
-    } //add class: classToApply to selected choice
+      if (selectedAnswer === currentQuestion.answer) {
+        selectedChoice.classList.add("correct");
+        increaseScore(pointScore);
+      } else if (selectedAnswer != currentQuestion.answer) {
+        selectedChoice.classList.add("incorrect");
+      }
+
+      return getNextQuestion();
+    } // setTimeout(()=>{getNextQuestion()},3000)
     //remove classToApply after few seconds -use setTimeout()?
+    // setTimeout(()=>{
+    //   selectedChoice.classList.remove(classToApply)
+    //   getNextQuestion()
+    // },3000)
 
   });
 }); //add to score

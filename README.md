@@ -15,7 +15,7 @@ Timeline:
 
 31/01/23: Created question object to use in game. Added more 'finalised' stylling to the game. Made homepage for starting game and added home icon to game page for restarting game. Declared variables for game in javascript file.
 
-01/02/23: Wrote out js functions -not currently complete. Added media query for desktop/tablet screen. 
+01/02/23: Wrote out js functions -not currently complete. Added media query for desktop/tablet screen. Javascript startGame and getNextQuestion functions working. Changed questionObject do choices are in array.
 
 Pseudocode/Code Planning
 ![HTML-CSS plan-pseudocode](https://user-images.githubusercontent.com/81630548/214893048-81f0c464-e514-4086-9bb2-fab6ce5fcbf2.jpg)

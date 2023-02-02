@@ -78,8 +78,10 @@ header .home-icon {
   border-radius: 1.5rem;
   background-color: #C68AFE;
   color: #22045C;
+  font-size: 150%;
+  display: flex;
+  align-items: center;
   text-align: center;
-  font-size: 200%;
 }
 .question__choices {
   padding: 0;
@@ -98,6 +100,9 @@ header .home-icon {
   border-radius: 1rem;
   text-align: center;
   font-size: 125%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .question__choices :hover {
   background-color: #6B7DFF;
@@ -144,15 +149,18 @@ header .home-icon {
   }
 
   .question__text {
-    height: 10rem;
+    height: 9rem;
     width: auto;
     border: 10px solid #FEF9A8;
     border-radius: 1.5rem;
     font-size: 250%;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .question__choices {
-    height: 20rem;
+    height: 15rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -161,8 +169,8 @@ header .home-icon {
     margin-right: 1rem;
   }
   .question__choices--option {
-    flex-basis: 45%;
-    height: 6rem;
+    flex-basis: 47.5%;
+    height: 5rem;
     width: auto;
     border: 6px solid #FEF9A8;
     border-radius: 1rem;

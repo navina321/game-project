@@ -66,20 +66,39 @@ choices.forEach((choice) => {
       return;
     }
 
-    acceptAnswers = false;
-    const selectedChoice = e.target.value;
-    //accept selected choice and check if correct/incorrect
-    //toggle between correct and incorrect
-    let classToApply = selectedChoice == currentQuestion.answer;
+    // acceptAnswers = false;
+    // const selectedChoice = e.target.value;
+    // const selectedAnswer = selectedChoice;
+    // //accept selected choice and check if correct/incorrect
+    // let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
-    if (classToApply === "correct") {
-      //add score by pointScore
-      increaseScore();
+    // if (classToApply === "correct") {
+    //   increaseScore(pointScore);
+    // }
+
+    // //add class: classToApply to selected choice
+    // selectedChoice.parentElement.classList.add(classToApply)
+
+    if(acceptAnswers = true) {
+      const selectedChoice = e.target;
+      const selectedAnswer =selectedChoice
+      if(selectedAnswer === currentQuestion.answer) {
+        selectedChoice.classList.add("correct")
+        increaseScore(pointScore)
+      }else if (selectedAnswer != currentQuestion.answer) { 
+        selectedChoice.classList.add("incorrect")
+      }
+      return getNextQuestion();
     }
 
-    //add class: classToApply to selected choice
+    // setTimeout(()=>{getNextQuestion()},3000)
 
     //remove classToApply after few seconds -use setTimeout()?
+    // setTimeout(()=>{
+    //   selectedChoice.classList.remove(classToApply)
+    //   getNextQuestion()
+    // },3000)
+
   });
 });
 

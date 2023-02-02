@@ -97,8 +97,11 @@ header {
         border-radius: 1.5rem;
         background-color: $color-question;
         color:$color-primary;
+        font-size: 150%;
+        display: flex;
+        align-items: center;
         text-align: center;
-        font-size: 200%;
+        
     }
 
     &__choices {
@@ -118,6 +121,9 @@ header {
             border-radius: 1rem;
             text-align: center;
             font-size: 125%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         :hover {
             background-color: $color-select;
@@ -176,17 +182,20 @@ header {
     .question {
         &__text {
             
-            height: 10rem;
+            height: 9rem;
             width: auto;
             border: 10px solid $color-secondary;
             border-radius: 1.5rem;
             font-size: 250%;
             margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     
         &__choices {
             
-            height: 20rem;
+            height: 15rem;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -195,14 +204,13 @@ header {
             margin-right: 1rem;
     
             &--option {
-                flex-basis: 45%;
-                height: 6rem;
+                flex-basis: 47.5%;
+                height: 5rem;
                 width: auto;
                 border: 6px solid $color-secondary;
                 border-radius: 1rem;
                 font-size: 175%;
             }
-            
         }
     }
 }

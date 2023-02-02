@@ -4,6 +4,12 @@ Introduction
 
 I have used a combination of HTML, CSS/SCSS and JavaScript to create a fully functioning browser-based trivia game which has a start page, game page with 20 questions and 4 answer choices for each question. 
 
+Mobile Display:
+![mobile-game](https://user-images.githubusercontent.com/81630548/216458680-5c868d15-007c-4aae-ade9-b1d2ccbec213.PNG)
+
+Desktop Display:
+![desktop-game](https://user-images.githubusercontent.com/81630548/216458762-0d444a3c-2d59-44a9-a50c-c31840f4f52d.PNG)
+
 
 Deadline: 03/02/23
 
@@ -17,11 +23,8 @@ Timeline:
 
 01/02/23: Wrote out js functions -not currently complete. Added media query for desktop/tablet screen. Javascript startGame and getNextQuestion functions working. Changed questionObject do choices are in array.
 
-02/02/23: Added the javascript for changing choice background if correct/incorrect - not currently working. Fixed apply correct/incorrect class to javascript, increase score and get next question functions working properly. Changed progress bar to show question progress. Moved unnecessary code to gitignore file.
+02/02/23: Added the javascript for changing choice background if correct/incorrect - not currently working. Fixed apply correct/incorrect class to javascript, increase score and get next question functions working properly. Changed progress bar to show question progress. Moved unnecessary code to gitignore file. Fixed styling for the progress bar.
 
-
-
-Mobile Display: ![mobile-game](https://user-images.githubusercontent.com/81630548/216384905-b9232c82-e63d-4a64-9783-c861d2d557b7.PNG)
 
 
 Pseudocode/Code Planning

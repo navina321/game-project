@@ -138,6 +138,35 @@ header {
   }
 }
 
+.endpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: $color-secondary;
+    margin-top: 2rem;
+
+    .final-score {
+        font-size: 200%;
+    }
+    #userName {
+        margin-top: 2rem;
+    }
+    .game-option {
+        border: 5px solid $color-choice;
+        border-radius: 0.5rem;
+        font-size: 125%;
+        width: 8rem;
+        height: 3rem;
+        margin: 0.5rem;
+        color: $color-primary;
+        background-color: $color-question;
+        align-content: center;
+    }
+
+}
+
 .correct {
   background-color: $color-correct;
 }

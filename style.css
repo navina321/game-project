@@ -121,6 +121,33 @@ header .home-icon {
   background-color: #6b7dff;
 }
 
+.endpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #fef9a8;
+  margin-top: 2rem;
+}
+.endpage .final-score {
+  font-size: 200%;
+}
+.endpage #userName {
+  margin-top: 2rem;
+}
+.endpage .game-option {
+  border: 5px solid #6bbbff;
+  border-radius: 0.5rem;
+  font-size: 125%;
+  width: 8rem;
+  height: 3rem;
+  margin: 0.5rem;
+  color: #22045c;
+  background-color: #c68afe;
+  align-content: center;
+}
+
 .correct {
   background-color: #2ba84a;
 }

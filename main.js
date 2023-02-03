@@ -1,9 +1,7 @@
 import { questionObject } from "./question.js";
 
 const question = document.querySelector(".question__text");
-const choices = Array.from(
-  document.querySelectorAll(".question__choices--option")
-);
+const choices = document.querySelectorAll(".question__choices--option");
 const progressText = document.querySelector(".progress__text");
 const scoreTotal = document.querySelector(".score__total");
 const progressBar = document.querySelector(".progress__bar");
@@ -29,8 +27,8 @@ const startGame = () => {
 // function to get the next question
 const getNextQuestion = () => {
   if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
-    localStorage.setItem("recent-score",score)
-    return window.location.assign("/endpage.html")
+    localStorage.setItem("recent-score", score);
+    return window.location.assign("/endpage.html");
   }
 
   questionCount++;

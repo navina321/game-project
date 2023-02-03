@@ -11,7 +11,7 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 var question = document.querySelector(".question__text");
-var choices = Array.from(document.querySelectorAll(".question__choices--option"));
+var choices = document.querySelectorAll(".question__choices--option");
 var progressText = document.querySelector(".progress__text");
 var scoreTotal = document.querySelector(".score__total");
 var progressBar = document.querySelector(".progress__bar");

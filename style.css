@@ -137,8 +137,11 @@ header .home-icon {
   color: #fef9a8;
   margin-top: 2rem;
 }
-.endpage .final-score {
+.endpage .score-text {
   font-size: 200%;
+}
+.endpage .final-score {
+  font-size: 300%;
 }
 .endpage #userName {
   margin-top: 2rem;
@@ -146,10 +149,10 @@ header .home-icon {
 .endpage .game-option {
   border: 5px solid #6bbbff;
   border-radius: 0.5rem;
-  font-size: 125%;
-  width: 8rem;
-  height: 3rem;
-  margin: 0.5rem;
+  font-size: 250%;
+  width: 60%;
+  height: 10rem;
+  margin: 2rem;
   color: #22045c;
   background-color: #c68afe;
   align-content: center;

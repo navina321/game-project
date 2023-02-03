@@ -153,8 +153,11 @@ header {
     color: $color-secondary;
     margin-top: 2rem;
 
+    .score-text {
+      font-size: 200%;
+    }
     .final-score {
-        font-size: 200%;
+        font-size: 300%;
     }
     #userName {
         margin-top: 2rem;
@@ -162,10 +165,10 @@ header {
     .game-option {
         border: 5px solid $color-choice;
         border-radius: 0.5rem;
-        font-size: 125%;
-        width: 8rem;
-        height: 3rem;
-        margin: 0.5rem;
+        font-size: 250%;
+        width: 60%;
+        height: 10rem;
+        margin: 2rem;
         color: $color-primary;
         background-color: $color-question;
         align-content: center;

@@ -86,13 +86,5 @@ const increaseScore = () => {
   scoreTotal.innerText = score;
 };
 
-//function to trigger end game
-// const endGame = () => {
-//   if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
-//     return alert("Congratulations!!!");
-//   }
-//   //return alert("Congratulations!!!");
-// };
-
 startGame();
-//endGame();
+

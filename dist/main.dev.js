@@ -87,13 +87,6 @@ choices.forEach(function (choice) {
 var increaseScore = function increaseScore() {
   score += pointScore;
   scoreTotal.innerText = score;
-}; //function to trigger end game
-// const endGame = () => {
-//   if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
-//     return alert("Congratulations!!!");
-//   }
-//   //return alert("Congratulations!!!");
-// };
+};
 
-
-startGame(); //endGame();
+startGame();

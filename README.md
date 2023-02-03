@@ -23,7 +23,9 @@ Timeline:
 
 01/02/23: Wrote out js functions -not currently complete. Added media query for desktop/tablet screen. Javascript startGame and getNextQuestion functions working. Changed questionObject do choices are in array.
 
-02/02/23: Added the javascript for changing choice background if correct/incorrect - not currently working. Fixed apply correct/incorrect class to javascript, increase score and get next question functions working properly. Changed progress bar to show question progress. Moved unnecessary code to gitignore file. Fixed styling for the progress bar.
+02/02/23: Added the javascript for changing choice background if correct/incorrect - not currently working. Fixed apply correct/incorrect class to javascript, increase score and get next question functions working properly. Changed progress bar to show question progress. Moved unnecessary code to gitignore file. Fixed styling for the progress bar. Added endpage html.
+
+03/02/23: Added js for endpage, linked endpage.html to main.js so that game moves to endpage after questions finish. Fixed style for links. Added highscores page.
 
 
 
@@ -31,3 +33,5 @@ Pseudocode/Code Planning
 ![HTML-CSS plan-pseudocode](https://user-images.githubusercontent.com/81630548/214893048-81f0c464-e514-4086-9bb2-fab6ce5fcbf2.jpg)
 ![JS Plan-Pseudocode](https://user-images.githubusercontent.com/81630548/215122718-557e532f-db28-4940-a4a4-273fb5259f68.jpg)
 
+Sources:
+Save score to local storage: https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68

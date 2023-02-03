@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trivia Endpage</title>
-    <link rel ="stylesheet" href = "style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>TR¡V¡A</h1>
-        <a href="./homepage.html">
-            <img class = "home-icon"src="./images/homepage-icon.png" alt="homepage">
-        </a>  
+      <h1>TR¡V¡A</h1>
+      <a href="./homepage.html">
+        <img
+          class="home-icon"
+          src="./images/homepage-icon.png"
+          alt="homepage"
+        />
+      </a>
     </header>
     <section class="container">
-        <div class="endpage">
-            <h1 class = "score__text">Score:</h1>
-            <h1 class = "final-score">0</h1>
-            <form class="save-score">
-                <h2>Enter your name to save your score!</h2>
-                <input type="text" name = "name" id="userName" placeholder="Enter name">
-                <button class = "button" id = "save-score__button" type="submit" onclick="saveScore(event)" disabled>Save</button>
-            </form>
+      <div class="endpage">
+        <h1 class="score__text">Your Score:</h1>
+        <h1 class="final-score">0</h1>
 
-            <a class = "game-option" href = "./index.html">Play Again!</a>
-            <a class = "game-option" href = "./highscores.html">High Scores</a>
-        </div>
+        <a class="game-option" href="./index.html">Play Again!</a>
+      </div>
     </section>
-    <script src = "./endpage.js"></script>
-</body>
+    <script src="./end.js"></script>
+  </body>
 </html>

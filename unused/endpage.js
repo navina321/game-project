@@ -10,24 +10,24 @@ const maxStoredScores = 5;
 finalScore.innerText = recentScore;
 
 userName.addEventListener("keyup", () => {
-    saveScore.disabled = !userName.value
-})
+  saveScore.disabled = !userName.value;
+});
 
 const saveHighScore = (e) => {
-    e.preventDefault()
+  e.preventDefault();
 
-    const score = {
-        score: recentScore,
-        name: userName.value
-    }
-    highScores.push(score)
+  const score = {
+    score: recentScore,
+    name: userName.innerText,
+  };
+  highScores.push(score);
 
-    highScores.sort((a,b) => {
-        return b.score - a.score
-    })
+  highScores.sort((a, b) => {
+    return b.score - a.score;
+  });
 
-    highScores.splice(5)
+  highScores.splice(5);
 
-    localStorage.setItem("highScores", JSON.stringify(highScores))
-    window.location.assign("/")
-}
+  localStorage.setItem("highScores", JSON.stringify(highScores));
+  window.location.assign("/");
+};

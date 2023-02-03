@@ -34,13 +34,13 @@ var startGame = function startGame() {
 
 var getNextQuestion = function getNextQuestion() {
   if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
-    return;
+    localStorage.setItem("recent-score", score);
+    return window.location.assign("/endpage.html");
   }
 
   questionCount++;
   progressText.innerText = "Question ".concat(questionCount, " of ").concat(maxQuestions);
-  progressBar.style.width = "".concat(questionCount / maxQuestions * 100, "%"); //find out how to increase fill of progress bar by percentage of question# out of total questions
-  //keep track of which question is on
+  progressBar.style.width = "".concat(questionCount / maxQuestions * 100, "%"); //keep track of which question is on
 
   var questionIndex = Math.floor(Math.random() * questionsAvailable.length);
   currentQuestion = questionsAvailable[questionIndex];
@@ -77,7 +77,7 @@ choices.forEach(function (choice) {
         selectedChoice.classList.remove("correct");
         selectedChoice.classList.remove("incorrect");
         getNextQuestion();
-      }, 5000);
+      }, 3000);
     }
 
     return;
@@ -88,13 +88,12 @@ var increaseScore = function increaseScore() {
   score += pointScore;
   scoreTotal.innerText = score;
 }; //function to trigger end game
+// const endGame = () => {
+//   if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
+//     return alert("Congratulations!!!");
+//   }
+//   //return alert("Congratulations!!!");
+// };
 
 
-var endGame = function endGame() {
-  if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
-    alert("Congratulations!!!");
-    return endGame();
-  }
-};
-
-startGame();
+startGame(); //endGame();

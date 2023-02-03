@@ -5,6 +5,13 @@
   font-family: "Righteous", cursive;
 }
 
+a:link, a:visited {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
 .home-page {
   display: flex;
   flex-direction: column;

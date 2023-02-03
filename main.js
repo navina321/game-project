@@ -1,4 +1,4 @@
-import {questionObject} from "./question.js";
+import { questionObject } from "./question.js";
 
 const question = document.querySelector(".question__text");
 const choices = Array.from(
@@ -29,20 +29,19 @@ const startGame = () => {
 // function to get the next question
 const getNextQuestion = () => {
   if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
-    return;
+    localStorage.setItem("recent-score",score)
+    return window.location.assign("/endpage.html")
   }
 
   questionCount++;
   progressText.innerText = `Question ${questionCount} of ${maxQuestions}`;
-  progressBar.style.width = `${(questionCount/maxQuestions)*100}%`
-
-  //find out how to increase fill of progress bar by percentage of question# out of total questions
+  progressBar.style.width = `${(questionCount / maxQuestions) * 100}%`;
 
   //keep track of which question is on
   const questionIndex = Math.floor(Math.random() * questionsAvailable.length);
   currentQuestion = questionsAvailable[questionIndex];
   currentAnswer = currentQuestion.answer;
-  
+
   question.innerText = currentQuestion.question;
 
   //get choices for questions
@@ -64,21 +63,20 @@ choices.forEach((choice) => {
       return;
     }
 
-    if(acceptAnswers = true) {
+    if ((acceptAnswers = true)) {
       const selectedChoice = e.target;
-     
-      if(selectedChoice.innerText == currentAnswer) {
-        selectedChoice.classList.add("correct")
-        increaseScore(pointScore)
 
-      }else if (selectedChoice.innerText != currentAnswer) { 
-        selectedChoice.classList.add("incorrect")
+      if (selectedChoice.innerText == currentAnswer) {
+        selectedChoice.classList.add("correct");
+        increaseScore(pointScore);
+      } else if (selectedChoice.innerText != currentAnswer) {
+        selectedChoice.classList.add("incorrect");
       }
-      setTimeout(()=>{
-        selectedChoice.classList.remove("correct")
-        selectedChoice.classList.remove("incorrect")
+      setTimeout(() => {
+        selectedChoice.classList.remove("correct");
+        selectedChoice.classList.remove("incorrect");
         getNextQuestion();
-      },5000)
+      }, 3000);
     }
     return;
   });
@@ -91,11 +89,12 @@ const increaseScore = () => {
 };
 
 //function to trigger end game
-const endGame = () => {
-  if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
-    alert("Congratulations!!!")
-    return endGame();
-  }
-}
+// const endGame = () => {
+//   if (questionsAvailable.length === 0 || questionCount > maxQuestions) {
+//     return alert("Congratulations!!!");
+//   }
+//   //return alert("Congratulations!!!");
+// };
 
 startGame();
+//endGame();

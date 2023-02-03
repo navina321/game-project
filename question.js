@@ -45,7 +45,7 @@ export const questionObject = [
     answer: "Jackal",
   },
   {
-    question: "In which US state is Are 51 located?",
+    question: "In which US state is Area 51 located?",
     choices: ["California", "Maine", "Alaska", "Nevada"],
     answer: "Nevada",
   },
